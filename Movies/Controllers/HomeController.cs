@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Movies.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,21 +9,24 @@ namespace Movies.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        
+
+        public ActionResult Netflix()
         {
+           
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Movies()
         {
-            ViewBag.Message = "Your application description page.";
+           
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Customers()
         {
-            ViewBag.Message = "Your contact page.";
+            
 
             return View();
         }
