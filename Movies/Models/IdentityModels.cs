@@ -25,6 +25,9 @@ namespace Movies.Models
         {
         }
 
+        public object MembershipTypes { get; set; }
+        public object Customers { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
