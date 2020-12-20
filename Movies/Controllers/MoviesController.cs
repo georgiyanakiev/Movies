@@ -1,4 +1,5 @@
 ﻿using Movies.Models;
+using Movies.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,19 @@ namespace Movies.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" } ;
-            return View(movie);
+            var customers = new List<Customer>
+            {
+                new Customer { Name = "Customer 1"},
+                new Customer { Name = "Customer 2"}
+            };
+
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+
+            };
+            return View(viewModel); 
         }
         [Route("movies/released/{year}/{month:regex(\\d{4}):range(1, 12)}")]
         public ActionResult ByReleaseDate(int year, int month)
