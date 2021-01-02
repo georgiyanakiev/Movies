@@ -191,6 +191,10 @@
     <Compile Include="Migrations\202012201824375_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>202012201824375_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101022324106_addeddbset.cs" />
+    <Compile Include="Migrations\202101022324106_addeddbset.Designer.cs">
+      <DependentUpon>202101022324106_addeddbset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -299,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012201824375_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>202012201824375_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101022324106_addeddbset.resx">
+      <DependentUpon>202101022324106_addeddbset.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
