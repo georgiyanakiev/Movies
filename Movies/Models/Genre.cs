@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Vidly.Models
+namespace Movies.Models
 {
     public class Genre
     {
