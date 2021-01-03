@@ -23,7 +23,7 @@ namespace Movies.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new CustomerFormViewModel
+            var viewModel = new NewCustomerViewModel
             {
                 Customer = new Customer(),
                 MembershipTypes = membershipTypes
@@ -34,7 +34,7 @@ namespace Movies.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save(Customer customer)
+        public ActionResult Create(Customer customer)
         {
             if (!ModelState.IsValid)
             {
