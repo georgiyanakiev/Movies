@@ -195,6 +195,10 @@
     <Compile Include="Migrations\202101022324106_addeddbset.Designer.cs">
       <DependentUpon>202101022324106_addeddbset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101030002464_addedmoremodels.cs" />
+    <Compile Include="Migrations\202101030002464_addedmoremodels.Designer.cs">
+      <DependentUpon>202101030002464_addedmoremodels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -306,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101022324106_addeddbset.resx">
       <DependentUpon>202101022324106_addeddbset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101030002464_addedmoremodels.resx">
+      <DependentUpon>202101030002464_addedmoremodels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
