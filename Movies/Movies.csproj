@@ -225,6 +225,9 @@
     <Compile Include="ViewModels\Netflix.cs" />
     <Compile Include="ViewModels\NewCustomerViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
+    <None Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />

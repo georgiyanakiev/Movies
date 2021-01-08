@@ -1,14 +1,15 @@
-﻿using System.Data.Entity;
+﻿using Movies.Models;
+using Movies.ViewModels;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-using Movies.Models;
-using Movies.ViewModels;
+
 
 namespace Movies.Controllers
 {
     public class CustomersController : Controller
     {
-        public ApplicationDbContext _context;
+        private ApplicationDbContext _context;
 
         public CustomersController()
         {
@@ -19,18 +20,8 @@ namespace Movies.Controllers
         {
             _context.Dispose();
         }
-        public ActionResult New()
-        {
-            var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new CustomerFormViewModel
-            {
-                Customer = new Customer(),
-                MembershipTypes = membershipTypes
-            };
 
-            return View("CustomerForm", viewModel);
-        }
-        public ActionResult CustomerForm()
+        public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
