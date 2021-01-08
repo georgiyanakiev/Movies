@@ -21,7 +21,7 @@ namespace Movies.Controllers
             _context.Dispose();
         }
 
-        public ActionResult New()
+        public ActionResult CustomerForm()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
