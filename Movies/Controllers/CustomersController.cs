@@ -8,7 +8,7 @@ namespace Movies.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext _context;
+        public ApplicationDbContext _context;
 
         public CustomersController()
         {
@@ -19,7 +19,17 @@ namespace Movies.Controllers
         {
             _context.Dispose();
         }
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = new Customer(),
+                MembershipTypes = membershipTypes
+            };
 
+            return View("CustomerForm", viewModel);
+        }
         public ActionResult CustomerForm()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
