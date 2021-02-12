@@ -7,6 +7,9 @@ namespace Movies.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
+        [Display(Name = "Phone")]
+        public string PhoneNumber { get; set; }
+        [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
         [Required]
@@ -67,7 +70,11 @@ namespace Movies.Models
     }
 
     public class RegisterViewModel
-    {   [Required]
+    {
+        [Required]
+        [Display(Name = "Phone")]
+        public int PhoneNumber { get; set; }
+        [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
         [Required]
