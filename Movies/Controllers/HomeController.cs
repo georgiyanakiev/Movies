@@ -1,4 +1,5 @@
-﻿using Movies.ViewModels;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Movies.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace Movies.Controllers
     public class HomeController : Controller
     {
         
-        [OutputCache(Duration = 50, Location = OutputCacheLocation.Server, VaryByParam = "*")]
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]
         public ActionResult Netflix()
-        {
-           
+        {   
+            
             return View();
         }
 
