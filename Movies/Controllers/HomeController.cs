@@ -11,7 +11,7 @@ namespace Movies.Controllers
     public class HomeController : Controller
     {
         
-        [OutputCache(Duration = 50, Location = OutputCacheLocation.Server, VaryByParam = "*")]
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]
         public ActionResult Netflix()
         {
            
