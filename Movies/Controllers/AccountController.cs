@@ -373,10 +373,13 @@ namespace Movies.Controllers
                     return View("ExternalLoginFailure");
                 }
                 var user = new ApplicationUser
-                { 
-                    UserName = model.Email, 
+                {
+                    UserName = model.Email,
                     Email = model.Email,
-                    DrivingLicence = model.DrivingLicense
+                    DrivingLicence = model.DrivingLicense,
+                    PhoneNumber = model.PhoneNumber
+                    
+                    
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
