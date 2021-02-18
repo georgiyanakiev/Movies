@@ -21,9 +21,8 @@ namespace Movies.Controllers
 
         public ActionResult Movies()
         {
-           
+            throw new Exception();
 
-            return View();
         }
 
         public ActionResult Customers()
